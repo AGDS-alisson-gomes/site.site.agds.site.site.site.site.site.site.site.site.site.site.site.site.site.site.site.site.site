@@ -1,10 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Player de Vídeo</title>
+</head>
 <body>
+  <video id="myVideo" width="320" height="240" controls>
+    <source src="meu_video.mp4" type="video/mp4">
+    Seu navegador não suporta este formato de vídeo.
+  </video>
 
-<title> O básico da vida </title>
-<h1> Não sabe como beber água? <h1>
+  <button onclick="playPause()">Play/Pause</button>
 
-    <h1> </h1>Assista abaixo: </h1>
+  <script>
+    var video = document.getElementById("myVideo");
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/LX8RnCLDHTA?si=M_j3_-in2BDvNAtD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+    function playPause() {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  </script>
 </body>
+</html>
